@@ -9,7 +9,7 @@ from socket import *
 # task queue
 tasks = []
 
-ips = ["192.122.236.104", "171.67.92.155", "143.215.216.194"]
+ips = ["192.122.236.104", "171.67.92.155", "129.110.253.31"]
 
 clients = [None] * 3
 available_machine = [False, False, False]
@@ -18,14 +18,11 @@ dict = {}
 
 def message_received(client, server, message):
     clientID = client["id"]
-
     # 接收到了uri
-
     if clientID in dict: #如果client之前有发过来message, 就把这个message加到client 之前message的末端。client 里面应该有几个field，不知道能不能直接用client来当key.
         dict[clientID][1] += message
         if (message.endswith("\n")):#如果这个message是\n结尾，那就说明这个uri传完了，我们有一个完整的uri
-            print("get full message:")
-            print(message)
+            print("get full message")
             tasks.append((dict[clientID][0], dict[clientID][1]))#把这个client和他完整的uri放到tasks里面
             dict.pop(clientID) #把这个client和他的message从dictionary移除，避免之后这个client发过来，我们把他新的uri和旧的uri连在一起
     else: #这个uri是新的，之前没有储存过这个client这个uri的数据
