@@ -1,0 +1,7 @@
+#! /bin/sh
+  
+sudo apt update
+yes | sudo apt install python3-pip
+sudo pip3 install websocket-server
+git clone https://github.com/lianghuanjia/655-Final-Project-Load-Balancer.git
+cd 655-Final-Project-Load-Balancer/
