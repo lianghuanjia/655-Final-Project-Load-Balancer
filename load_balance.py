@@ -41,7 +41,7 @@ def load_balance():
     while True:
         if True in available_machine and len(tasks) != 0:
             index = available_machine.index(True)
-            available_machine[index] = False  # 锁死
+            available_machine[index] = False  # set the machine as occupied
             task = tasks.pop(0)
             client = task[0]  # get client
             message = task[1] + "\n"  # get url
