@@ -1,4 +1,4 @@
-1. Set up a geni node using rspec
+1. Set up a geni node using rspec or create a node in GENI on your own. Remember to give the node a public IP to route to.
 https://github.com/lianghuanjia/655-Final-Project-Load-Balancer/blob/main/Middle%20Server%20Rspec
 
 2. Login to the geni node
@@ -14,7 +14,7 @@ vim load_balance.py
 
 6. In the main function, go to the following line: 
 server = WebsocketServer(host='192.41.233.54', port=12345), 
-change the host into the public IP of the machine the code runs on
+change the host into the public IP of the machine the code is running on
 
 7. Run the code:
 python3 load_balance.py
