@@ -3,10 +3,10 @@ https://github.com/lianghuanjia/655-Final-Project-Load-Balancer/blob/main/Middle
 
 2. Login to the geni node
 
-3.Copy the bash script in the following file
+3. Create a bash file and copy the script in the following bash file into the bash file you just created
 https://github.com/lianghuanjia/655-Final-Project-Load-Balancer/blob/main/Middle%20Server%20Bash
 
-4.change the bash script file's permission:
+4. Change the bash script file's permission:
 chmod +x [bash file you created and put the bash script inside]
 
 5. open the load_balance.py:
